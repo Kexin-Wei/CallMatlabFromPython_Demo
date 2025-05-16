@@ -30,4 +30,3 @@ if __name__ == "__main__":
     matlab_engine_test()
     tic = time.time() - tic
     print(f"External elapased time: {tic:.2f} seconds")
-    # eng.quit()cd 

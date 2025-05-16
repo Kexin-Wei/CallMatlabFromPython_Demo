@@ -1,5 +1,5 @@
 # Call MATLAB from Python
-There are two ways to call MATLAB from Python:
+Here trying two ways to call MATLAB from Python:
 1. Use MATLAB Engine API for Python
 2. Use MATLAB Compiler SDK to create a shared library and call it from Python
 
@@ -31,3 +31,11 @@ print(a,b)
 ```python
 eng.sim("simulinkModelName")
 ```
+
+# Other methods
+Other ways to call a compiled Simulink model in Python
+- Package the Simulink model as a Functional Mockup Unit (FMU): Call the FMU from Python using third-party libraries such as FMPy
+- Package the Simulink model as a simulation service API 
+(using MATLAB Production Server): RESTful API for scalable applications
+- Generate C/C++ code or shared library from the Simulink 
+model: Call the generated code using CTYPES or related wrappers
