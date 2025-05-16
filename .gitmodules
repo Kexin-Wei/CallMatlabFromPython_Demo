@@ -1,0 +1,3 @@
+[submodule "other examples/Call-Simulink-from-Python"]
+	path = other examples/Call-Simulink-from-Python
+	url = https://github.com/mathworks/Call-Simulink-from-Python.git
