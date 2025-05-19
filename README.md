@@ -31,6 +31,7 @@ print(a,b)
 ```python
 eng.sim("simulinkModelName")
 ```
+This will run the whole simulation. If a step by step simulation is needed, use the following code in `test_simulink_step_by_step.py`
 
 # Other methods
 Other ways to call a compiled Simulink model in Python
