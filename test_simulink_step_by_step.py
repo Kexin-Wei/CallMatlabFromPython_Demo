@@ -17,9 +17,14 @@ class TestSimulink:
 
     def __del__(self):
         if self.eng is not None:
-            self._simulink_stop()
-            self.eng.quit()
-            print("Disconnected from Matlab")
+            try:
+                self._simulink_stop()
+                self.eng.quit()
+                print("Disconnected from Matlab")
+            except matlab.engine.engineerror.EngineError:
+                print("MATLAB engine already terminated.")
+            except Exception as e:
+                print(f"Error during cleanup: {e}")
 
     def _simulink_set_u(self, u):
         self.u = u
