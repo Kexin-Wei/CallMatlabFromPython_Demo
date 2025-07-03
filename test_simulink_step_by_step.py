@@ -21,7 +21,7 @@ class TestSimulink:
                 self._simulink_stop()
                 self.eng.quit()
                 print("Disconnected from Matlab")
-            except matlab.engine.engineerror.EngineError:
+            except matlab.engine.engineerror.RejectedExecutionError:
                 print("MATLAB engine already terminated.")
             except Exception as e:
                 print(f"Error during cleanup: {e}")
